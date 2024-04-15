@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header>
+        <h1 style="text-align: center;">Generacionn de QR</h1>
+    </header>
+    <div style="margin-top: 50px ;">
+        <div>
+            <br> <br>
+            <label for="input1"> Nombre:</label>
+            <input type="text" id="input1" required maxlength="100" placeholder="Ingresa tu nombre">
+            <br><br>
+            <label for="input2">correo electronico</label>
+            <input type="email" id="input2" required maxlength="100" placeholder="Ingresa tu correo">
+            <br><br>
+            <label for="input3">Slecciona la institucion</label>
+            <input type="text" id="input3" required list="institucionLista">
+            <br><br>
+            <datalist id="institucionLista">
+                <option value="IPN">IPN</option>
+                <option value="UACM">UACM</option>
+                <option value="FES ARAGON">UNAM</option>
+                <option value="UAM IZTAPALAPA">UAM</option>
+                <option value="TEC DE MONTERREY">TEC</option>
+                <option value="ANAHUAC FRESAS">ANAHUAC</option>
+                <option value="CONSTANTINO QUIJANO">CQ</option>
+            </datalist>
+            <Label for="input4"> Dependencia</Label>
+            <input type="text" id="input4" required maxlength="100">
+            <br><br>
+            <div>
+                <button onclick="generarQR()" class="btn-generar">Generar QR</button>
+                <button onclick="location.href= 'index.html'" class="btn-nuevo">Generar nuevo QR</button>
+            </div>
+            
+        </div>
+    </div>
+    <div id="qr-code">
+        <img src="" alt="">
+
+
+    </div>
+
+    <script src="qr.js"></script>
+</body>
+
+</html>
